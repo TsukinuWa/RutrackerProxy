@@ -1,0 +1,35 @@
+{
+  "name": "RuTracker Proxy",
+  "short_name": "RuTracker",
+  "description": "Откройте доступ к RuTracker.org",
+  "icons": {
+    "128": "assets/addon-128.png"
+  },
+  "permissions": [
+    "proxy",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "manifest_version": 2,
+  "version": "0.0.2",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tsukinu@rutracker",
+      "strict_min_version": "91.1.0",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": []
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "113.0"
+    }
+  },
+  "background": {
+    "scripts": [
+      "./background.js"
+    ]
+  }
+}
